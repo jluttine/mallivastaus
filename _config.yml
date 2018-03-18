@@ -33,6 +33,8 @@ plugins:
 # KaTeX math engine is used without plugins via javascript
 kramdown:
   math_engine: null
+  syntax_highlighter: rouge
+
 defaults:
   -
     scope:
