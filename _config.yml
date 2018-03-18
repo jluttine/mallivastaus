@@ -33,6 +33,13 @@ plugins:
 # KaTeX math engine is used without plugins via javascript
 kramdown:
   math_engine: null
+defaults:
+  -
+    scope:
+      path: "exercises"
+    values:
+      layout: exercise
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
