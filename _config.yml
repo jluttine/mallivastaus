@@ -35,6 +35,9 @@ kramdown:
   math_engine: null
   syntax_highlighter: rouge
 
+# Remove trailing .html suffix and put the file as index.html under a directory
+permalink: pretty
+
 defaults:
   -
     scope:
