@@ -148,7 +148,7 @@ To achieve this, put arbitrary HTML code inside a div tag as follows:
     </div>
 
 Then you can use HTML, CSS and JavaScript as you would normally use within an
-HTML file.
+HTML file inside `<body>` tag.
 
 # Attachments
 
