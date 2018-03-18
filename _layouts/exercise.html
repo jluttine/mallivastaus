@@ -5,3 +5,13 @@ layout: post
 {{ content }}
 
 <script type="text/javascript">{% include js/katex.js %}</script>
+
+<script type="text/javascript">
+document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+  el.outerHTML = katex.renderToString(el.textContent, { displayMode: false });
+});
+
+document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+  el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true });
+});
+</script>

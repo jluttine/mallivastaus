@@ -32,7 +32,7 @@ plugins:
 
 # KaTeX math engine is used without plugins via javascript
 kramdown:
-  math_engine: null
+  #math_engine: null
   syntax_highlighter: rouge
 
 # Remove trailing .html suffix and put the file as index.html under a directory
