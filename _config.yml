@@ -30,6 +30,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# KaTeX math engine is used without plugins via javascript
+kramdown:
+  math_engine: null
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
