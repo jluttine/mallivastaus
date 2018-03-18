@@ -1,13 +1,14 @@
 with (import <nixpkgs> {});
 let
+  # Instructions: Modify Gemfile. Then, to update the environment, delete
+  # gemset.nix and Gemfile.lock files and run bundix -l. Restart the nix-shell
+  # after that.
   env = bundlerEnv {
-    name = "mallivastaus-env";
+    name = "jekyll-gems";
     inherit ruby;
-    gemfile = ./Gemfile;
-    lockfile = ./Gemfile.lock;
-    gemset = ./gemset.nix;
+    gemdir = ./.;
   };
 in stdenv.mkDerivation {
-  name = "mallivastaus";
-  buildInputs = [env ruby];
+  name = "jekyll-shell";
+  buildInputs = [ bundix env env.wrappedRuby ];
 }
